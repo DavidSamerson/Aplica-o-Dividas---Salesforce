@@ -1,0 +1,25 @@
+<!--
+  @File Name          : Dividas.page
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 13/11/2019 10:03:03
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+<apex:page>
+    <head>
+        <title>Dividas</title>
+        <!-- Styles -->
+        <apex:stylesheet value="{!$resource.semantic, semantic.min.css}"/>
+
+        <!-- Scripts -->
+        <apex:includescript value="{!$resource.semantic, semantic.min.js}"/>
+        
+    </head>
+    <body>
+        
+    </body>
+</apex:page>

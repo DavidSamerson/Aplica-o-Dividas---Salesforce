@@ -1,0 +1,96 @@
+<!--
+  @File Name          : Dividas.page
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 13/11/2019 14:07:16
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+<apex:page>
+    <head>
+        <title>Dividas</title>
+        <!-- Styles -->
+        <apex:stylesheet value="{!URLFOR($resource.semantic,'semantic.min.css')}"/>
+        <style>
+            .Nubank{
+                background-color: #655DD7 !important;
+                color: white !important;
+            }
+            .Nubank2{
+                background-color: #877ffb !important;
+                color: white !important;
+            }
+            .Inter {
+                background-color: #FF7900 !important;
+                color: white !important;
+            }
+            .Inter2{
+                background-color: #ff790094 !important;
+                color: white !important;
+            }
+            .tituloCard {
+                width: 100px !important;
+            }
+            .mes{
+                text-align: center !important;
+            }
+            .total{
+                width: 20px !important;
+                background-color: rgb(62, 62, 60) !important;
+                text-align: center !important;
+                color: white !important;
+            }
+            .total2{
+                width: 20px !important;
+                background-color: rgb(62, 62, 60) !important;
+                text-align: center !important;
+                color: white !important;
+            }
+            .separador{
+                border-right: 1px #ffffff2e solid !important;
+            }
+            <!-- linha rosa na tabela -->
+            .ui.definition.table td:nth-child(2) {
+                border-left: 1px solid rgb(231, 154, 234);
+            }
+            <!-- Tamanho da fonte da tabela -->
+            .ui.table {
+                font-size: 1.2em;
+            }
+        </style>
+
+        <!-- Scripts -->
+        <apex:includescript value="{!URLFOR($resource.semantic, 'semantic.min.js')}"/>
+        
+    </head>
+    <body>
+
+    
+
+    <table class="ui definition table" id="tabelaDeDividas">
+            <thead>
+                <tr>
+                <th>David Samerson</th>
+                <th class="mes Nubank">JANEIRO</th>
+                <th class="total separador">Total dos gastos</th>
+                <th class="total"><i class="calendar check icon"></i> Foi Pago?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td class="Nubank tituloCard"><i class="cc mastercard icon"></i>Nubank</td>
+                <td class="Nubank2"></td>
+                <td class="total2">350,00</td>
+                <td class="total2"></td>
+                </tr>
+            </tbody>
+    </table>
+
+    <script>
+    </script>
+
+    </body>
+</apex:page>

@@ -1,0 +1,44 @@
+<!--
+  @File Name          : Dividas.page
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 13/11/2019 10:24:00
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+<apex:page>
+    <head>
+        <title>Dividas</title>
+        <!-- Styles -->
+        <apex:stylesheet value="{!URLFOR($resource.semantic,'semantic.min.css')}"/>
+
+        <!-- Scripts -->
+        <apex:includescript value="{!URLFOR($resource.semantic, 'semantic.min.js')}"/>
+        
+    </head>
+    <body>
+
+            <table class="ui definition table">
+                    <thead>
+                      <tr><th></th>
+                      <th></th>
+                      <th></th>
+                    </tr></thead>
+                    <tbody>
+                      <tr>
+                        <td>Nubank</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Inter</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                  </tbody></table>
+        
+    </body>
+</apex:page>
