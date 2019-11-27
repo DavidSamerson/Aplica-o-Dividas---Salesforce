@@ -4,7 +4,7 @@
   @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
   @Group              : 
   @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
-  @Last Modified On   : 27/11/2019 14:57:42
+  @Last Modified On   : 27/11/2019 14:39:28
   @Modification Log   : 
   Ver       Date            Author      		    Modification
   1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
@@ -13,11 +13,10 @@
 
     <head>
         <title>Dividas</title>
-        <!-- Scripts -->
-        <apex:includescript value="{!URLFOR($Resource.componentes, 'jquery331.min.js')}" />
-        <apex:includescript value="{!URLFOR($Resource.semantic, 'semantic.min.js')}" />
         <!-- Styles -->
         <apex:stylesheet value="{!URLFOR($Resource.semantic,'semantic.min.css')}" />
+        <apex:stylesheet value="{!URLFOR($Resource.componentes,'jquery.1.12.css')}" />
+
         <style>
             .Nubank {
                 background-color: #655DD7 !important;
@@ -103,6 +102,13 @@
             }
             
         </style>
+
+        <!-- Scripts -->
+        <apex:includescript value="{!URLFOR($Resource.semantic, 'semantic.min.js')}"> 
+        </apex:includescript>
+        <apex:includescript value="{!URLFOR($Resource.componentes, 'jquery.1.12.js')}" > 
+        </apex:includescript>
+
     </head>
 
     <body>

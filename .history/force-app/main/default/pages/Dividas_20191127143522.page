@@ -4,7 +4,7 @@
   @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
   @Group              : 
   @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
-  @Last Modified On   : 27/11/2019 14:57:42
+  @Last Modified On   : 27/11/2019 14:35:22
   @Modification Log   : 
   Ver       Date            Author      		    Modification
   1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
@@ -13,11 +13,10 @@
 
     <head>
         <title>Dividas</title>
-        <!-- Scripts -->
-        <apex:includescript value="{!URLFOR($Resource.componentes, 'jquery331.min.js')}" />
-        <apex:includescript value="{!URLFOR($Resource.semantic, 'semantic.min.js')}" />
         <!-- Styles -->
         <apex:stylesheet value="{!URLFOR($Resource.semantic,'semantic.min.css')}" />
+        <apex:stylesheet value="{!URLFOR($Resource.componentes,'jquery.1.12.css')}" />
+
         <style>
             .Nubank {
                 background-color: #655DD7 !important;
@@ -103,6 +102,11 @@
             }
             
         </style>
+
+        <!-- Scripts -->
+        <apex:includescript value="{!URLFOR($Resource.semantic, 'semantic.min.js')}" />
+        <apex:includescript value="{!URLFOR($Resource.componentes, 'jquery.1.12.js')}" />
+
     </head>
 
     <body>
@@ -113,12 +117,12 @@
                                     <i class="dropdown icon"></i>
                                     <div class="default text">Select Friend</div>
                                     <div class="menu">
-                                      <div class="item" data-value="jenny"> Jenny Hess </div>
-                                      <div class="item" data-value="elliot"> Elliot Fu </div>
-                                      <div class="item" data-value="stevie"> Stevie Feliciano </div>
-                                      <div class="item" data-value="christian"> Christian </div>
-                                      <div class="item" data-value="matt"> Matt </div>
-                                      <div class="item" data-value="justen"> Justen Kitsune </div>
+                                      <div class="item" data-value="jenny"><img class="ui mini avatar image" src="/images/avatar/small/jenny.jpg" /> Jenny Hess </div>
+                                      <div class="item" data-value="elliot"><img class="ui mini avatar image" src="/images/avatar/small/elliot.jpg" /> Elliot Fu </div>
+                                      <div class="item" data-value="stevie"><img class="ui mini avatar image" src="/images/avatar/small/stevie.jpg" /> Stevie Feliciano </div>
+                                      <div class="item" data-value="christian"><img class="ui mini avatar image" src="/images/avatar/small/christian.jpg" /> Christian </div>
+                                      <div class="item" data-value="matt"><img class="ui mini avatar image" src="/images/avatar/small/matt.jpg" /> Matt </div>
+                                      <div class="item" data-value="justen"><img class="ui mini avatar image" src="/images/avatar/small/justen.jpg" /> Justen Kitsune </div>
                                     </div>
                             </div>
             </div>
