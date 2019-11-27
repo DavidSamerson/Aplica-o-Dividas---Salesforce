@@ -4,7 +4,7 @@
   @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
   @Group              : 
   @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
-  @Last Modified On   : 27/11/2019 13:53:43
+  @Last Modified On   : 27/11/2019 13:48:52
   @Modification Log   : 
   Ver       Date            Author      		    Modification
   1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
@@ -108,8 +108,8 @@
 
     <body>
             <div class="ui labeled button" tabindex="0">
-                    <div class="ui red button" style="width: 162px;"><i class="calendar alternate icon"></i>Mês</div>
-                            <div class="ui left pointing label fluid selection dropdown ">
+                    <div class="ui red button"><i class="heart icon"></i>Mês</div>
+                            <div class="ui fluid selection dropdown left pointing label">
                                     <input type="hidden" name="user" />
                                     <i class="dropdown icon"></i>
                                     <div class="default text">Select Friend</div>
@@ -150,7 +150,7 @@
             </table>
         <!-- </div> -->
         <script>
-            $('.ui.dropdown').dropdown();
+            $('.ui.dropdown').dropdown();   
         </script>
 
     </body>

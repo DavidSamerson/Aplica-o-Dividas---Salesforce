@@ -4,7 +4,7 @@
   @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
   @Group              : 
   @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
-  @Last Modified On   : 27/11/2019 13:53:43
+  @Last Modified On   : 27/11/2019 13:33:38
   @Modification Log   : 
   Ver       Date            Author      		    Modification
   1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
@@ -108,24 +108,14 @@
 
     <body>
             <div class="ui labeled button" tabindex="0">
-                    <div class="ui red button" style="width: 162px;"><i class="calendar alternate icon"></i>Mês</div>
-                            <div class="ui left pointing label fluid selection dropdown ">
-                                    <input type="hidden" name="user" />
-                                    <i class="dropdown icon"></i>
-                                    <div class="default text">Select Friend</div>
-                                    <div class="menu">
-                                      <div class="item" data-value="jenny"><img class="ui mini avatar image" src="/images/avatar/small/jenny.jpg" /> Jenny Hess </div>
-                                      <div class="item" data-value="elliot"><img class="ui mini avatar image" src="/images/avatar/small/elliot.jpg" /> Elliot Fu </div>
-                                      <div class="item" data-value="stevie"><img class="ui mini avatar image" src="/images/avatar/small/stevie.jpg" /> Stevie Feliciano </div>
-                                      <div class="item" data-value="christian"><img class="ui mini avatar image" src="/images/avatar/small/christian.jpg" /> Christian </div>
-                                      <div class="item" data-value="matt"><img class="ui mini avatar image" src="/images/avatar/small/matt.jpg" /> Matt </div>
-                                      <div class="item" data-value="justen"><img class="ui mini avatar image" src="/images/avatar/small/justen.jpg" /> Justen Kitsune </div>
-                                    </div>
-                            </div>
+                    <div class="ui red button"><i class="heart icon"></i>Mês</div>
+                    <a class="ui basic red left pointing label">
+                      Janeiro
+                    </a>
             </div>
         
         <!-- <div class="ui segment"> -->
-            <!-- <i class="money bill alternate icon" style="font-size: 3em;color: #e79aea;"></i> -->
+            <i class="money bill alternate icon" style="font-size: 3em;color: #e79aea;"></i>
             <!-- <div class="ui divider"></div> -->
 
             <table class="ui definition table" id="tabelaDeDividas">
@@ -150,7 +140,6 @@
             </table>
         <!-- </div> -->
         <script>
-            $('.ui.dropdown').dropdown();
         </script>
 
     </body>

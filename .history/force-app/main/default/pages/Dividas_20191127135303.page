@@ -4,7 +4,7 @@
   @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
   @Group              : 
   @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
-  @Last Modified On   : 27/11/2019 13:53:43
+  @Last Modified On   : 27/11/2019 13:53:03
   @Modification Log   : 
   Ver       Date            Author      		    Modification
   1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
@@ -108,7 +108,7 @@
 
     <body>
             <div class="ui labeled button" tabindex="0">
-                    <div class="ui red button" style="width: 162px;"><i class="calendar alternate icon"></i>Mês</div>
+                    <div class="ui red button" style="width: 162px;"><i class="calendar alternate"></i>Mês</div>
                             <div class="ui left pointing label fluid selection dropdown ">
                                     <input type="hidden" name="user" />
                                     <i class="dropdown icon"></i>
