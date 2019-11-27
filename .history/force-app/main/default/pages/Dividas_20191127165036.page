@@ -4,7 +4,7 @@
   @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
   @Group              : 
   @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
-  @Last Modified On   : 27/11/2019 17:03:51
+  @Last Modified On   : 27/11/2019 16:50:35
   @Modification Log   : 
   Ver       Date            Author      		    Modification
   1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
@@ -101,35 +101,7 @@
             .ui.red.button, .ui.red.buttons .button : hover {
                 background-color: #655dd7;
             }
-            .ui.selection.active.dropdown .menu {
-                 border-color: #96c8da;
-                 background: #e79aea; 
-                 color: white;
-            }
-            .ui.labeled.button:not([class*="left labeled"])>.label { 
-                background: #e79aea; 
-            }
-            .ui.dropdown>.text {
-                color: white; 
-            }
-            .ui.selection.visible.dropdown>.text:not(.default) {
-                font-weight: 400;
-                color: rgb(255, 254, 255); 
-            }
-            .ui.selection.dropdown .menu>.item {
-                color: white;
-            }
-            .ui.dropdown:not(.button)>.default.text {
-                color: rgb(254, 251, 255);
-            }
-            .ui.red.button:active, .ui.red.buttons .button:active {
-                background-color: #ed9af0;
-                color: #fff;
-                text-shadow: none; 
-            }
-            .ui.red.button:hover, .ui.red.buttons .button:hover {
-                background-color: #ed9af0; 
-            }
+            
         </style>
     </head>
 

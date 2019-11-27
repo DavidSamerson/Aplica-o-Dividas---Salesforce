@@ -4,7 +4,7 @@
   @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
   @Group              : 
   @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
-  @Last Modified On   : 27/11/2019 17:03:51
+  @Last Modified On   : 27/11/2019 16:36:51
   @Modification Log   : 
   Ver       Date            Author      		    Modification
   1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
@@ -101,42 +101,14 @@
             .ui.red.button, .ui.red.buttons .button : hover {
                 background-color: #655dd7;
             }
-            .ui.selection.active.dropdown .menu {
-                 border-color: #96c8da;
-                 background: #e79aea; 
-                 color: white;
-            }
-            .ui.labeled.button:not([class*="left labeled"])>.label { 
-                background: #e79aea; 
-            }
-            .ui.dropdown>.text {
-                color: white; 
-            }
-            .ui.selection.visible.dropdown>.text:not(.default) {
-                font-weight: 400;
-                color: rgb(255, 254, 255); 
-            }
-            .ui.selection.dropdown .menu>.item {
-                color: white;
-            }
-            .ui.dropdown:not(.button)>.default.text {
-                color: rgb(254, 251, 255);
-            }
-            .ui.red.button:active, .ui.red.buttons .button:active {
-                background-color: #ed9af0;
-                color: #fff;
-                text-shadow: none; 
-            }
-            .ui.red.button:hover, .ui.red.buttons .button:hover {
-                background-color: #ed9af0; 
-            }
+            
         </style>
     </head>
 
     <body>
             <div class="ui labeled button" tabindex="0">
                     <div class="ui red button right pointing" style="width: 162px;"><i class="calendar alternate icon"></i>Mês</div>
-                            <div class="ui label fluid selection dropdown">
+                            <div class="ui label fluid selection dropdown left pointing">
                                     <input type="hidden" name="user" />
                                     <i class="dropdown icon"></i>
                                     <div class="default text">Selecione o mês</div>
@@ -145,7 +117,7 @@
                             </div>
                     </div>
             </div>
-            
+        
         <!-- <div class="ui segment"> -->
             <!-- <i class="money bill alternate icon" style="font-size: 3em;color: #e79aea;"></i> -->
             <!-- <div class="ui divider"></div> -->
@@ -196,7 +168,7 @@
                 //var mesAtual = '';
 
                 for(var i = 0; i < 12; i ++){
-                    $('#selectMes').append('<div class="item" id="'+Meses[i]+'" data-value="'+Meses[i]+'">'+Meses[i]+'</div>');
+                    $('#selectMes').append('<div class="item" data-value="'+Meses[i]+'">'+Meses[i]+'</div>');
                 }
                 $('.ui.dropdown').dropdown();
             }
