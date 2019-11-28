@@ -4,7 +4,7 @@
   @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
   @Group              : 
   @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
-  @Last Modified On   : 28/11/2019 11:00:28
+  @Last Modified On   : 28/11/2019 10:39:10
   @Modification Log   : 
   Ver       Date            Author      		    Modification
   1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
@@ -130,12 +130,6 @@
             .ui.red.button:hover, .ui.red.buttons .button:hover {
                 background-color: #3e3e3c; 
             }
-            .ui.facebook.button {
-                background-color: #655dd7; 
-            }
-            .ui.facebook.button:active, .ui.facebook.button:hover {
-                background-color: #b45dd7; 
-            }
         </style>
     </head>
 
@@ -143,8 +137,8 @@
             <div class="ui labeled button" tabindex="0">
                     <div class="ui red button right pointing" style="width: 162px;">
                         <i class="calendar alternate icon"></i>Mês</div>
-                            <div class="ui label fluid selection dropdown" id="mes" onchange="mudaNomeDoMes('','')">
-                                    <input type="hidden" name="user" id="teste" />
+                            <div class="ui label fluid selection dropdown" id="mes" onchange="mudaNomeDoMes(value)">
+                                    <input type="hidden" name="user" />
                                     <i class="dropdown icon"></i>
                                     <div class="default text">Selecione o mês</div>
                                     <div class="menu" id="selectMes" >
@@ -178,9 +172,7 @@
                         </div>
                 </div>
             </div>
-            <button class="ui circular facebook icon button">
-                    <i class="redo icon"></i>
-            </button>
+            
         <!-- <div class="ui segment"> -->
             <!-- <i class="money bill alternate icon" style="font-size: 3em;color: #e79aea;"></i> -->
             <!-- <div class="ui divider"></div> -->
@@ -225,10 +217,10 @@
             var data = new Date();
 
             $('.ui.dropdown').dropdown();
-            setaMesesEAnosParaSelect();
+            setaMesesParaSelect();
+            setaAnoParaSelect();
 
-            function setaMesesEAnosParaSelect(){
-                //Setando os meses
+            function setaMesesParaSelect(){
                 for(var i = 0; i < 12; i ++){
                     if(Meses[this.data.getMonth()] == Meses[i]){
                         $('#selectMes').append('<div class="item active selected" id="'+Meses[i]+'" data-value="'+Meses[i]+'">'+Meses[i]+'</div>');
@@ -236,7 +228,16 @@
                         $('#selectMes').append('<div class="item" id="'+Meses[i]+'" data-value="'+Meses[i]+'">'+Meses[i]+'</div>');
                     }
                 }
-                //setando os anos
+                $('.ui.dropdown').dropdown();
+                $('#mes').dropdown('set selected', Meses[this.data.getMonth()] );
+                mudaNomeDoMes(Meses[this.data.getMonth()]);
+            }
+
+            function mudaNomeDoMes(value){
+                $('.mes').text(value);
+            }
+
+            function setaAnoParaSelect(){
                 for(var i = 2000; i <= this.data.getFullYear() + 10; i++) {
                     if(this.data.getFullYear() == i){
                         $('#selectAno').append('<div class="item active selected" id="'+i+'" data-value="'+i+'">'+i+'</div>');
@@ -244,19 +245,8 @@
                         $('#selectAno').append('<div class="item" id="'+i+'" data-value="'+i+'">'+i+'</div>');
                     }
                 }
-
                 $('.ui.dropdown').dropdown();
-                $('#mes').dropdown('set selected', Meses[this.data.getMonth()] );
                 $('#ano').dropdown('set selected', this.data.getFullYear() );
-                mudaNomeDoMes(Meses[this.data.getMonth()], this.data.getFullYear());
-            }
-
-            function mudaNomeDoMes(mes, ano){
-                if(mes == ''){
-                    $('.mes').text($('#mes').dropdown('get value'));
-                } else {
-                    $('.mes').text(mes);
-                }
             }
 
             function setaDevedoresSelect(){

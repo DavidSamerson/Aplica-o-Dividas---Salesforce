@@ -4,12 +4,12 @@
   @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
   @Group              : 
   @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
-  @Last Modified On   : 28/11/2019 11:00:28
+  @Last Modified On   : 28/11/2019 09:20:37
   @Modification Log   : 
   Ver       Date            Author      		    Modification
   1.0    13/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
 -->
-<apex:page standardController="Compras__c" extensions="Dividas">
+<apex:page >
 
     <head>
         <title>Dividas</title>
@@ -130,21 +130,14 @@
             .ui.red.button:hover, .ui.red.buttons .button:hover {
                 background-color: #3e3e3c; 
             }
-            .ui.facebook.button {
-                background-color: #655dd7; 
-            }
-            .ui.facebook.button:active, .ui.facebook.button:hover {
-                background-color: #b45dd7; 
-            }
         </style>
     </head>
 
     <body>
             <div class="ui labeled button" tabindex="0">
-                    <div class="ui red button right pointing" style="width: 162px;">
-                        <i class="calendar alternate icon"></i>Mês</div>
-                            <div class="ui label fluid selection dropdown" id="mes" onchange="mudaNomeDoMes('','')">
-                                    <input type="hidden" name="user" id="teste" />
+                    <div class="ui red button right pointing" style="width: 162px;"><i class="calendar alternate icon"></i>Mês</div>
+                            <div class="ui label fluid selection dropdown">
+                                    <input type="hidden" name="user" />
                                     <i class="dropdown icon"></i>
                                     <div class="default text">Selecione o mês</div>
                                     <div class="menu" id="selectMes" >
@@ -154,33 +147,28 @@
             </div>
 
             <div class="ui labeled button" tabindex="0">
-                <div class="ui red button right pointing" style="width: 162px;">
-                    <i class="calendar alternate icon"></i>Ano</div>
-                        <div class="ui label fluid selection dropdown" id="ano">
+                <div class="ui red button right pointing" style="width: 162px;"><i class="calendar alternate icon"></i>Ano</div>
+                        <div class="ui label fluid selection dropdown">
                                 <input type="hidden" name="user" />
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Selecione o Ano</div>
-                                <div class="menu" id="selectAno" >
+                                <div class="menu" id="selectMes" >
                                   <!-- <div class="item" data-value="jenny"> Jenny Hess </div> -->
                         </div>
                 </div>
             </div>
             <div class="ui labeled button" tabindex="0">
-                <div class="ui red button right pointing" style="width: 185px;"><i class="user icon"></i>Devedor</div>
+                <div class="ui red button right pointing" style="width: 177px;"><i class="user icon"></i>Devedor</div>
                         <div class="ui label fluid selection dropdown">
                                 <input type="hidden" name="user" />
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Selecione a pessoa</div>
-                                <div class="menu" id="selectPessoa" >
-                                        <apex:repeat var="devedor" value="{!devedores}">
-                                             <div class="item" data-value="{!devedor.Name}">{!devedor.Name}</div> 
-                                        </apex:repeat>
+                                <div class="menu" id="selectMes" >
+                                  <!-- <div class="item" data-value="jenny"> Jenny Hess </div> -->
                         </div>
                 </div>
             </div>
-            <button class="ui circular facebook icon button">
-                    <i class="redo icon"></i>
-            </button>
+            
         <!-- <div class="ui segment"> -->
             <!-- <i class="money bill alternate icon" style="font-size: 3em;color: #e79aea;"></i> -->
             <!-- <div class="ui divider"></div> -->
@@ -225,41 +213,19 @@
             var data = new Date();
 
             $('.ui.dropdown').dropdown();
-            setaMesesEAnosParaSelect();
+            setaMesesParaSelect();
 
-            function setaMesesEAnosParaSelect(){
-                //Setando os meses
+            function setaMesesParaSelect(){
+                //var mesAtual = '';
+
                 for(var i = 0; i < 12; i ++){
-                    if(Meses[this.data.getMonth()] == Meses[i]){
-                        $('#selectMes').append('<div class="item active selected" id="'+Meses[i]+'" data-value="'+Meses[i]+'">'+Meses[i]+'</div>');
-                    } else {
-                        $('#selectMes').append('<div class="item" id="'+Meses[i]+'" data-value="'+Meses[i]+'">'+Meses[i]+'</div>');
-                    }
+                    $('#selectMes').append('<div class="item" id="'+Meses[i]+'" data-value="'+Meses[i]+'">'+Meses[i]+'</div>');
                 }
-                //setando os anos
-                for(var i = 2000; i <= this.data.getFullYear() + 10; i++) {
-                    if(this.data.getFullYear() == i){
-                        $('#selectAno').append('<div class="item active selected" id="'+i+'" data-value="'+i+'">'+i+'</div>');
-                    } else {
-                        $('#selectAno').append('<div class="item" id="'+i+'" data-value="'+i+'">'+i+'</div>');
-                    }
-                }
-
                 $('.ui.dropdown').dropdown();
-                $('#mes').dropdown('set selected', Meses[this.data.getMonth()] );
-                $('#ano').dropdown('set selected', this.data.getFullYear() );
-                mudaNomeDoMes(Meses[this.data.getMonth()], this.data.getFullYear());
+                $('#' + Meses[data.getMonth]).attr('class', 'item active');
             }
 
-            function mudaNomeDoMes(mes, ano){
-                if(mes == ''){
-                    $('.mes').text($('#mes').dropdown('get value'));
-                } else {
-                    $('.mes').text(mes);
-                }
-            }
-
-            function setaDevedoresSelect(){
+            function setaAnoParaSelect(){
                 
             }
 

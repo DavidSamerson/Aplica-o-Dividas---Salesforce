@@ -90,6 +90,10 @@ declare module "@salesforce/resourceUrl/atutils" {
     var atutils: string;
     export default atutils;
 }
+declare module "@salesforce/resourceUrl/componentes" {
+    var componentes: string;
+    export default componentes;
+}
 declare module "@salesforce/resourceUrl/highlightjs" {
     var highlightjs: string;
     export default highlightjs;
@@ -105,6 +109,10 @@ declare module "@salesforce/resourceUrl/jscolor" {
 declare module "@salesforce/resourceUrl/normalize" {
     var normalize: string;
     export default normalize;
+}
+declare module "@salesforce/resourceUrl/semantic" {
+    var semantic: string;
+    export default semantic;
 }
 declare module "@salesforce/resourceUrl/style" {
     var style: string;
