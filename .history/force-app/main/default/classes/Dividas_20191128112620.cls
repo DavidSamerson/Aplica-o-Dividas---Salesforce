@@ -4,7 +4,7 @@
  * @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
  * @Group              : 
  * @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
- * @Last Modified On   : 28/11/2019 11:28:07
+ * @Last Modified On   : 28/11/2019 11:26:20
  * @Modification Log   : 
  * Ver       Date            Author      		    Modification
  * 1.0    28/11/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
@@ -31,7 +31,6 @@ public class Dividas {
     public static List<Compras__c> getCompras(){
         Date data = Date.today();
 
-        
 
         return null;
     }
